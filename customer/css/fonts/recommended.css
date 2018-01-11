@@ -1,0 +1,47 @@
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* other products */
+
+.other-products img {
+  width: 50%;
+
+
+}
+
+/*navigation slider next and back*/
+
+.navigation {
+  position: relative;
+}
+.navigation .ellipse,
+.navigation .page_link {
+  display: none !important;
+}
+.navigation .previous_link,
+.navigation .next_link {
+  display: block;
+  position: absolute;
+  width: 28px;
+  height: 27px;
+  top: 70px;
+  background: url("../../../img/arrows-slider.png") no-repeat;
+  text-indent: -9999px;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+.navigation .previous_link:hover,
+.navigation .next_link:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.navigation .previous_link {
+  background-position: left top;
+  left: -20px;
+}
+.navigation .next_link {
+  background-position: right top;
+  right: -20px;
+}

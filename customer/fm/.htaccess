@@ -1,0 +1,33 @@
+<IfModule mod_rewrite.c>
+
+RewriteEngine on
+
+ErrorDocument 404 /404.php
+RewriteRule ^home\.html$ home.php?fm=content [L]
+RewriteRule ^profil-(.*)\.html$ home.php?fm=profil&id=$1 [L]
+RewriteRule ^profil-(.*)-([0-9]+)\.html$ home.php?fm=profil&page=$1 [L]
+RewriteRule ^home-([0-9]+)\.html$ home.php?fm=content&offset=$1 [L]
+RewriteRule ^produk\.html$ home.php?fm=produk [L]
+RewriteRule ^produk-([0-9]+)-(.*)\.html$ home.php?fm=produkbeli&kd=$1 [L]
+RewriteRule ^artikel\.html$ home.php?fm=artikel [L]
+RewriteRule ^artikel-([0-9]+)\.html$ home.php?fm=artikel&offset=$1 [L]
+RewriteRule ^detail-artikel-([0-9]+)-(.*)\.html$ home.php?fm=detail-artikel&kd=$1 [L]
+RewriteRule ^detail-([0-9]+)-(.*)\.html$ home.php?fm=detail&kd=$1 [L]
+RewriteRule ^kategori-(.*)\.html$ home.php?fm=produk&id_kategori=$1 [L]
+RewriteRule ^hal-produk-([0-9]+)\.html$ home.php?fm=produk&offset=$1 [L]
+RewriteRule ^halkategori-(.*)-(.*)\.html$ home.php?fm=kategori-produk-halaman&id_kategori=$1&halkategori=$2 [L]
+RewriteRule ^cart\.html$ home.php?fm=cart [L]
+RewriteRule ^cart-tambah-([0-9]+)-(.*)\.html$ home.php?fm=cart-tambah&kd=$1 [L]
+RewriteRule ^cart-berkurang-([0-9]+)-(.*)\.html$ home.php?fm=cart-berkurang&kd=$1 [L]
+RewriteRule ^transaksi-([0-9]+)\.html$ home.php?fm=transaksi&total=$1 [L]
+RewriteRule ^syarat&ketentuan\.html$ home.php?fm=pemesanan [L]
+RewriteRule ^cartkosong\.html$ home.php?fm=cartkosong [L]
+RewriteRule ^cart-hapus-([0-9]+)\.html$ home.php?fm=cart-hapus&aksi=Hapus&idHapus=$1 [L]
+RewriteRule ^logout\.html$ home.php?fm=logout [L]
+RewriteRule ^cekout-(.*)\.html$  home.php?fm=cekout&Kode=$1 [L]
+
+
+Options All -Indexes
+</IfModule>
+
+

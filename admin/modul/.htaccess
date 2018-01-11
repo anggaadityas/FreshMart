@@ -1,0 +1,19 @@
+<IfModule mod_rewrite.c>
+
+RewriteEngine on
+
+ErrorDocument 404 /404.php
+RewriteRule ^dashboard$ dashboard.php?fm=freshmart [L]
+RewriteRule ^member$ dashboard.php?fm=member [L]
+RewriteRule ^items$ dashboard.php?fm=items [L]
+RewriteRule ^artikel$ dashboard.php?fm=artikel [L]
+RewriteRule ^pemesanan$ dashboard.php?fm=pemesanan [L]
+RewriteRule ^konfirmasi$ dashboard.php?fm=konfirmasi [L]
+RewriteRule ^laporan$ dashboard.php?fm=laporan [L]
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ index.php?fm=$1&Kd=$2
+
+Options All -Indexes
+</IfModule>
+
+

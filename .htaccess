@@ -1,0 +1,31 @@
+<IfModule mod_rewrite.c>
+
+RewriteEngine on
+
+ErrorDocument 404 /404.php
+RewriteRule ^index\.html$ index.php?fm=content [L]
+RewriteRule ^index-([0-9]+)\.html$ index.php?fm=content&offset=$1 [L]
+RewriteRule ^produk\.html$ index.php?fm=produk [L]
+RewriteRule ^artikel\.html$ index.php?fm=artikel [L]
+RewriteRule ^artikel-([0-9]+)\.html$ index.php?fm=artikel&offset=$1 [L]
+RewriteRule ^detail-artikel-([0-9]+)-(.*)\.html$ index.php?fm=detail-artikel&kd=$1 [L]
+RewriteRule ^produk-([0-9]+)-(.*)\.html$ index.php?fm=produkbeli&kd=$1 [L]
+RewriteRule ^detail-([0-9]+)-(.*)\.html$ index.php?fm=detail&kd=$1 [L]
+RewriteRule ^kategori-(.*)\.html$ index.php?fm=produk&id_kategori=$1 [L]
+RewriteRule ^hal-produk-([0-9]+)\.html$ index.php?fm=produk&offset=$1 [L]
+RewriteRule ^halkategori-(.*)-(.*)\.html$ index.php?fm=kategori-produk-halaman&id_kategori=$1&halkategori=$2 [L]
+RewriteRule ^cart\.html$ index.php?fm=cart [L]
+RewriteRule ^cart-tambah-([0-9]+)-(.*)\.html$ index.php?fm=cart-tambah&kd=$1 [L]
+RewriteRule ^cart-berkurang-([0-9]+)-(.*)\.html$ index.php?fm=cart-berkurang&kd=$1 [L]
+RewriteRule ^transaksi-([0-9]+)\.html$ index.php?fm=transaksi&total=$1 [L]
+RewriteRule ^syarat&ketentuan\.html$ index.php?fm=pemesanan [L]
+RewriteRule ^cartkosong\.html$ index.php?fm=cartkosong [L]
+RewriteRule ^cart-hapus-([0-9]+)\.html$ index.php?fm=cart-hapus&aksi=Hapus&idHapus=$1 [L]
+RewriteRule ^cekout-(.*)\.html$  index.php?fm=cekout&Kode=$1 [L]
+RewriteRule ^loginbel-([0-9]+)\.html$ index.php?fm=loginbel&total=$1 [L]
+RewriteRule ^datapembelian\.html$ index.php?fm=datapembelian [L]
+
+Options All -Indexes
+</IfModule>
+
+
